@@ -1,4 +1,4 @@
-# JObjectCustomConverter
+# JObjectConverter
 
 Custom Json Converter for JObject type using Json.net
 
