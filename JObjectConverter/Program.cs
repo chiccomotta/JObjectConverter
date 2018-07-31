@@ -1,22 +1,20 @@
 ﻿using System;
+using JObjectCoverter;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 
-namespace JObjectCoverter
+namespace JObjectConverter
 {
-    class Program
+    public class Program
     {
-        /// <summary>
-        /// Set snake name convention for deserialization/serialization
-        /// </summary>
         private static readonly SnakeCaseNamingStrategy SnakeNameStrategy = new SnakeCaseNamingStrategy();
         private static readonly JsonSerializerSettings JsonSerializerSettings =
             new JsonSerializerSettings()
             {
                 Formatting = Formatting.Indented,
                 Converters = new[]
-                    {new JObjectCustomConverter(SnakeNameStrategy)},
+                    {new JObjectConverter(SnakeNameStrategy) },
                 ContractResolver = new DefaultContractResolver
                 {
                     NamingStrategy = SnakeNameStrategy
@@ -25,7 +23,8 @@ namespace JObjectCoverter
 
         static void Main(string[] args)
         {
-            DeserializeJObjectTest();
+            //DeserializeJObjectTest();
+            SerializeJObjectTest();
             Console.ReadKey();
         }
 
@@ -49,16 +48,29 @@ namespace JObjectCoverter
         private static void SerializeJObjectTest()
         {
             var text = @"{
-                'Nominativo': 'ciao',
-                'IndirizzoDiFatturazione': 'via tal dei tali',
-                'FatturaDaInviare': '122222',
-                'NestedObject': {
+                'NestedObject': [
+                   {
                     'FirstName': 'Cristiano',
                     'LastName': 'Motta',
-                   }
+                    'Indirizzo': {
+                        'ViaPrincipale':'Valeriana', 
+                        'NumeroCivico': '14',
+                        'LinguaggiDiProgrammazione': ['C#','Visual Basic','Javascript','PHP'],
+                    'Computer': {
+                        'Cpu':'Intel I7', 
+                        'RAM': '16 GB',
+                        'SSD': true,
+                        'Versioni': [1,4,8,9,0,-1]
+                    },  
+                    },
+                   },
+                   {
+                    'FirstName': 'Claudio',
+                    'LastName': 'Motta',
+                   }]
                }";
 
-            JObject jobject = JObject.Parse(text);
+            var jobject = JObject.Parse(text);
             var json = SerializeJson(jobject);
             Console.WriteLine(json);
         }
