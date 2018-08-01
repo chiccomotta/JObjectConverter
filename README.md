@@ -5,7 +5,7 @@ Custom Json Converter for JObject type using Json.net
 > Serialize/Deserialize JObject type with snake name convention. By default Json.net ignore serialize settings for JObject type.
 
 
-Example of JObject content:
+Example of **JObject content** *(this is not a typed model, is a JObject!)*:
 ```
 {
   'NestedObject': [
