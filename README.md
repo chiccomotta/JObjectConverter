@@ -13,8 +13,8 @@ Example of **JObject content** *(this is not a typed model, is a JObject!)*:
       'FirstName': 'Cristiano',
       'LastName': 'Motta',
       'Indirizzo': {
-          'ViaPrincipale':'Valeriana', 
-          'NumeroCivico': '14',
+          'ViaPrincipale':'Beccaria', 
+          'NumeroCivico': '70',
           'LinguaggiDiProgrammazione': ['C#','Visual Basic','Javascript','PHP'],
       'Computer': {
           'Cpu':'Intel I7', 
@@ -39,8 +39,8 @@ Result:
       "first_name": "Cristiano",
       "last_name": "Motta",
       "indirizzo": {
-        "via_principale": "Valeriana",
-        "numero_civico": "14",
+        "via_principale": "Beccaria",
+        "numero_civico": "70",
         "linguaggi_di_programmazione": ["C#","Visual Basic","Javascript","PHP"],
         "computer": {
           "cpu": "Intel I7",
