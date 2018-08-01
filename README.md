@@ -33,7 +33,41 @@ Example of **JObject content** *(this is not a typed model, is a JObject!)*:
 
 Result:
 ```
-......
+{
+  "nested_object": [
+    {
+      "first_name": "Cristiano",
+      "last_name": "Motta",
+      "indirizzo": {
+        "via_principale": "Valeriana",
+        "numero_civico": "14",
+        "linguaggi_di_programmazione": [
+          "C#",
+          "Visual Basic",
+          "Javascript",
+          "PHP"
+        ],
+        "computer": {
+          "cpu": "Intel I7",
+          "ram": "16 GB",
+          "ssd": true,
+          "versioni": [
+            1,
+            4,
+            8,
+            9,
+            0,
+            -1
+          ]
+        }
+      }
+    },
+    {
+      "first_name": "Claudio",
+      "last_name": "Motta"
+    }
+  ]
+}
 ```
 
 
