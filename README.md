@@ -41,24 +41,12 @@ Result:
       "indirizzo": {
         "via_principale": "Valeriana",
         "numero_civico": "14",
-        "linguaggi_di_programmazione": [
-          "C#",
-          "Visual Basic",
-          "Javascript",
-          "PHP"
-        ],
+        "linguaggi_di_programmazione": ["C#","Visual Basic","Javascript","PHP"],
         "computer": {
           "cpu": "Intel I7",
           "ram": "16 GB",
           "ssd": true,
-          "versioni": [
-            1,
-            4,
-            8,
-            9,
-            0,
-            -1
-          ]
+          "versioni": [1,4,8,9,0,-1]
         }
       }
     },
